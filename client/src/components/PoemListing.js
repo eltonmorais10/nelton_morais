@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../pages/Home.css';
 
 import PoemItem from './PoemItem.js';
 
@@ -10,9 +10,9 @@ class PoemListing extends Component {
   }
 
   componentDidMount() {
-    fetch('/poems')
-      .then(res => res.json())
-      .then(poems => this.setState({ poems: poems, loading: true }));
+    // fetch('/poems')
+    //   .then(res => res.json())
+    //   .then(poems => this.setState({ poems: poems, loading: true }));
   }
 
   render() {

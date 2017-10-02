@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../pages/Home.css';
 
 class PoemItem extends Component {
   state = {
