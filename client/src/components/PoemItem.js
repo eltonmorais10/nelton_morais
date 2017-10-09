@@ -55,7 +55,7 @@ class PoemItem extends Component {
           <div className="text" dangerouslySetInnerHTML={{__html: this.props.text}} />
           <p className="read-more">
             <a href="#" className="button">
-              <i className="fa fa-eye" aria-hidden="true"></i> Ver mais
+              <i className="fa fa-expand" aria-hidden="true"></i> Ver tudo
             </a>
           </p>
         </div>

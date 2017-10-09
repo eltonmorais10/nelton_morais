@@ -45,8 +45,6 @@ class Poems extends Component {
     })
     .then(res => res.json())
     .then((response) => {
-      console.log("ACABOU");
-      console.log("response",response);
       if (response) {
         self.hidePoem(self.state.newPoems[index].id)
       } 

@@ -57,7 +57,7 @@ function checkAuth (nextState, replace) {
       if (nextState.location.state && nextState.location.pathname) {
         replace(nextState.location.pathname)
       } else {
-        replace('/backoffice')
+        replace('/')
       }
     }
   }
@@ -68,11 +68,11 @@ ReactDOM.render(
 		<Router history={ browserHistory }>
 			<Route component={FrontLayout}>
 				<IndexRoute name='index' component={ Home } />
-		  		<Route path='/' component={Home} />
+	  		<Route path='/' component={Home} />
 			</Route>
 			<Route component={EmptyLayout} onEnter={checkAuth}>
 				<Route path='/login' component={LogIn} />
-		  		<Route path='/backoffice' component={Backoffice} />
+	  		<Route path='/backoffice' component={Backoffice} />
 			</Route>
 			<Route path='*' component={NotFound}/>
 		</Router>

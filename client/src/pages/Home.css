@@ -22,8 +22,8 @@ a {
 
 .top-bar {
   display: flex;
-  flex: 0 0 250px;
-  background: url("/images/glass.jpeg");
+  flex: 0 0 175px;
+  background: url("/images/glass_small.jpg");
   background-size: 100%;
   background-position: center;
   color: #fff;
@@ -199,6 +199,10 @@ a {
   cursor: pointer;
 }
 
+.logo a {
+  color: #fff !important;
+}
+
 .logo:hover {
   text-shadow: 2px 2px 2px black;
 }
@@ -274,27 +278,34 @@ a {
   flex-wrap: wrap;
 }
 
-.PoemItem {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 0;
-  background: #fff;
-  margin: 0 0 10px 0;
-  border-radius: 5px; 
-  height: 300px;
-  width: 24%;
-  position: relative;
+.Home .PoemListing {
+  flex: 1 0 auto;
+  background: #fafafa;
+  padding: 20px;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 12px #ccc;
+  justify-content: space-between;
+  overflow-y: auto;
 }
+
+/*.Home .PoemListing .PoemItem {
+  flex: 1 0 0 !important;
+}*/
+
 
 .PoemItem .cover {
   flex: 1 0 30%;
   overflow: hidden;
   position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-.PoemItem .cover img {
+.PoemItem .cover img {    
   min-height: 100%;
   min-width: 100%;
+  max-height: 120%;
 }
 
 .PoemItem .title {
@@ -302,6 +313,7 @@ a {
   padding: 5px;
   line-height: 2;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .PoemItem .content {
@@ -344,7 +356,51 @@ a {
   font-weight: 700;
 }
 
+.Home {
+  display: flex;
+  flex: 1 0 0;
+  margin-top: 100px;
+  padding: 0 20px 20px 20px;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.PoemItem {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 0;
+  background: #fff;
+  margin: 0 0 10px 0;
+  border-radius: 5px; 
+  height: 300px;
+  min-width: calc(20% - 20px);
+  position: relative;
+  padding: 5px;
+  border: 1px solid #f1f1f1;
+}
+
+/* Large Screens */
+@media all and (max-width: 1024px) {
+  .PoemItem {
+    min-width: calc(24% - 20px);
+  }
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .PoemItem {
+    min-width: calc(50% - 20px);
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .PoemItem {
+    min-width: 100%;
+  }
 }
