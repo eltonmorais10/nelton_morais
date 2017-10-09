@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../pages/Home.css';
+import Loading from 'react-loading-animation';
 
 import PoemItem from './PoemItem.js';
 
@@ -10,16 +11,16 @@ class PoemListing extends Component {
   }
 
   componentDidMount() {
-    fetch('/poems')
-      .then(res => res.json())
-      .then(poems => this.setState({ poems: poems, loading: true }));
+    // fetch('/poems')
+    //   .then(res => res.json())
+    //   .then(poems => this.setState({ poems: poems, loading: true }));
   }
 
   render() {
     if (this.state.loading) {
       return (
         <div className="PoemListing">
-          <i className="fa fa-circle-o-notch fa-3x fa-spin" aria-hidden="true"></i>
+          <Loading />
         </div>
       );
     }

@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+/* GET backoffice */
+router.get('/backoffice', function(req, res, next) {
+  res.render('backoffice', { title: 'Backoffice' });
+});
+
 module.exports = router;

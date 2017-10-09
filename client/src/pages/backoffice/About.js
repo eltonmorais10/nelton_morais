@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../Home.css';
 
-import PoemListing from './PoemListing.js';
-
-class App extends Component {
+class About extends Component {
   componentDidMount() {
     // fetch('/users')
     //   .then(res => res.json())
@@ -12,11 +10,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <PoemListing />
+      <div className="About backoffice-page">
+        <div className="backoffice-title">About</div>
       </div>
     );
   }
 }
 
-export default App;
+export default About;
