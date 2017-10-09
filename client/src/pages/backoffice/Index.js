@@ -10,8 +10,8 @@ class Index extends Component {
 
   render() {
     return (
-      <div className="Index">
-        <h2>Index</h2>
+      <div className="Index backoffice-page">
+        <div className="backoffice-title">Index</div>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../pages/Home.css';
+import Loading from 'react-loading-animation';
 
 import PoemItem from './PoemItem.js';
 
@@ -19,7 +20,7 @@ class PoemListing extends Component {
     if (this.state.loading) {
       return (
         <div className="PoemListing">
-          <i className="fa fa-circle-o-notch fa-3x fa-spin" aria-hidden="true"></i>
+          <Loading />
         </div>
       );
     }

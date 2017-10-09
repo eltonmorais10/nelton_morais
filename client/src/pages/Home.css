@@ -42,6 +42,121 @@ a {
   flex: 1 0 0;
 }
 
+.backoffice-page {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  width: 100%
+}
+
+.backoffice-page .backoffice-page-title {
+  display: flex;
+  flex: 0 0 30px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.backoffice-page .backoffice-submenu {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row-reverse;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.backoffice-page .backoffice-submenu .backoffice-submenu-option {
+  background: #e9e9e9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.backoffice-submenu-option.refresh {
+  color: #265926;
+}
+
+.backoffice-submenu-option.refresh:hover {
+  color: #e9e9e9;
+  background: #265926;
+}
+
+.backoffice-page .backoffice-page-content {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.backoffice-poem-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(0 ,0 ,0 , 0.5);
+  width: 100%;
+  height: calc(100% - 100px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.backoffice-poem-actions .save-poem {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid;
+  margin: 0 10px;
+}
+
+.backoffice-poem-actions .hide-poem {
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.backoffice-poem-actions .save-poem:hover {
+  background: #005CB4;
+}
+
+.backoffice-poem-actions .hide-poem:hover {
+  background: #ff9800;
+}
+
+.new-poems {
+  display: flex;
+  flex: 0 0 auto;
+  background: #FFF680;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.new-poems::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  top: -15px;
+  right: 30px;
+  bottom: auto;
+  left: auto;
+  border-width: 0 15px 15px;
+  border-color: #FFF680 transparent;
+  border-style: solid;
+}
+
 .backoffice-side-bar {
   display: flex;
   flex: 0 0 auto;
@@ -61,10 +176,15 @@ a {
   display: flex;
   flex: 1 0 0;
   position: absolute;
-  width: calc(100% - 40px);
-  height: 100%;
+  width: calc(100% - 150px);
+  height: calc(100% - 90px);
   left: 40px;
-  padding: 10px 20px;
+  padding: 15px 30px;
+  margin: 30px;
+  background: #fff;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 12px #ccc;
 }
 
 .top-bar-logo {
@@ -125,6 +245,7 @@ a {
   flex: 1 0 0;
   flex-direction: column;
   background: #e9e9e9;
+  background: url("/images/pattern.jpg");
 }
 
 .App {
@@ -156,20 +277,24 @@ a {
 .PoemItem {
   display: flex;
   flex-direction: column;
-  flex: 1 0 25%;
+  flex: 0 0 0;
   background: #fff;
-  margin: 0 20px 10px 0;
+  margin: 0 0 10px 0;
   border-radius: 5px; 
   height: 300px;
+  width: 24%;
+  position: relative;
 }
 
 .PoemItem .cover {
-  flex: 1 0 50%;
+  flex: 1 0 30%;
   overflow: hidden;
+  position: relative;
 }
 
 .PoemItem .cover img {
-  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .PoemItem .title {
@@ -207,6 +332,10 @@ a {
 .PoemItem .content .read-more a:hover {
   color: #fff;
   background: #001f3f;
+}
+
+.hide {
+  display: none !important;
 }
 
 a {

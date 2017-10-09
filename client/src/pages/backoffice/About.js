@@ -10,8 +10,8 @@ class About extends Component {
 
   render() {
     return (
-      <div className="About">
-        <h2>About</h2>
+      <div className="About backoffice-page">
+        <div className="backoffice-title">About</div>
       </div>
     );
   }

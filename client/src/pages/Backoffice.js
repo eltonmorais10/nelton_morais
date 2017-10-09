@@ -32,9 +32,7 @@ class Backoffice extends Component {
   }
 
   componentDidMount() {
-    // fetch('/users')
-    //   .then(res => res.json())
-    //   .then(users => this.setState({ users: users, loading: false }));
+    this.browsePages(this.sideBarItems[1].content);
   }
 
   browsePages(item) {
