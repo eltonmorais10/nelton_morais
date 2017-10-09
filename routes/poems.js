@@ -117,4 +117,14 @@ router.post('/saveToDB', function(req, res, next) {
 	res.json(true);
 });
 
+
+router.get('/getAll', function(req, res, next) {
+	con.query("SELECT *, img as image, message as text FROM poems ORDER BY published_date ASC", function (err, result) {
+	    if (err) {
+			console.warn("err!", err);
+	    }
+		res.json(result);
+	});
+});
+
 module.exports = router;

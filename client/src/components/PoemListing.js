@@ -11,9 +11,9 @@ class PoemListing extends Component {
   }
 
   componentDidMount() {
-    // fetch('/poems')
-    //   .then(res => res.json())
-    //   .then(poems => this.setState({ poems: poems, loading: true }));
+    fetch('/poems/getAll')
+      .then(res => res.json())
+      .then(poems => this.setState({ poems: poems, loading: false }));
   }
 
   render() {
