@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../pages/Home.css';
 import Loading from 'react-loading-animation';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 import PoemItem from './PoemItem.js';
 
@@ -24,11 +25,20 @@ class PoemListing extends Component {
         </div>
       );
     }
+    const poems = this.state.poems.map((poem, index) =>
+      <PoemItem key={index} {...poem} />
+    );
+
     return (
       <div className="PoemListing">
-        {this.state.poems.map((poem, index) =>
-          <PoemItem key={index} {...poem} />
-        )}
+        <CSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}>
+          {poems}
+        </CSSTransitionGroup>
       </div>
     );
   }

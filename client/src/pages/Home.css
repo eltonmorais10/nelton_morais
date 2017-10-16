@@ -289,6 +289,11 @@ a {
   overflow-y: auto;
 }
 
+.Home .PoemListing > span {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /*.Home .PoemListing .PoemItem {
   flex: 1 0 0 !important;
 }*/
@@ -382,6 +387,19 @@ a {
   position: relative;
   padding: 5px;
   border: 1px solid #f1f1f1;
+  margin-right: 8px;
+}
+
+.example-appear {
+  /*opacity: 0.01;*/
+  transform: translate(100%);
+}
+
+.example-appear.example-appear-active {
+  /*opacity: 1;
+  transition: opacity .5s ease-in;*/
+  transform: translate(0%);
+  transition: transform 1000ms ease-in-out;
 }
 
 /* Large Screens */
